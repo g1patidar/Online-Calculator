@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   
+        #cal{
+            width: 440px;
+            height: 420px;
+            border: 2px solid black;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.987);
+            border-radius:10px;
+            color: black;
+            font-weight: bold;
+            font-size: 40px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            
+        }
+        
+        button{
+            border: 1px solid rgb(59, 46, 46);
+            padding: 10px;
+            width: 70px;
+            height: 50px;
+            /* margin: 10px; */
+            border-radius: 10px;
+            font-size: 30px;
+            background-color: rgba(95, 93, 93, 0.865);
+            color: white;
+        }
+        #ans{
+            margin: 20px;
+            height: 30px;
+            border: 1px solid rgb(255, 255, 255);
+            padding: 15px;
+            color: rgb(12, 12, 12);
+            font-size: 30px;
+            background-color: rgb(191, 203, 165);
+        }
+        .check{
+           height: 25px; 
+           width: 70px;
+           margin-top: 3px;
+           border-radius: 6px;
+           padding: 3px;
+            margin-left: 10px; 
+            background-color:rgb(134, 177, 163);
+            color: white;
+            font-size: 20px; 
+            text-align: center;
+        }
+        .redi{
+            height: 35px;
+            width: 220px;
+            border-radius: 3px;
+             padding: 3px;
+             margin-top: -5px;
+            margin-left: 20px;
+            background-color: rgb(138, 71, 71); 
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        td{
+            padding: 7px;
+        }
+        
+    </style>
+</head>
+<body>
+    <center><h1 >CALCULATOR</h1></center>
+        
+        <div id="cal" >
+            
+        <input type="text" id="ans">
+        <!-- <button id="bt1" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt1').value" value="1">1</button>
+        <button id="bt2" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt2').value" value="2">2</button>
+        <button id="bt3" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt3').value" value="3">3</button>
+        <button id="btplus" onclick="document.getElementById('ans').innerHTML += document.getElementById('btplus').value" value="+">+</button>
+        <button id="btminus" onclick="document.getElementById('ans').innerHTML += document.getElementById('btminus').value" value="-">-</button>
+        <button id="bt4" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt4').value" value="4">4</button>
+        <button id="bt5" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt5').value" value="5">5</button>
+        <button id="bt6" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt6').value" value="6">6</button>
+        <button id="btmulti" onclick="document.getElementById('ans').innerHTML += document.getElementById('btmulti').value" value="*">*</button>
+        <button id="btdive" onclick="document.getElementById('ans').innerHTML += document.getElementById('btdive').value" value="/">/</button>
+        <button id="bt7" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt7').value" value="7">7</button>
+        <button id="bt8" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt8').value" value="8">8</button>
+        <button id="bt9" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt9').value" value="9">9</button>
+        <button id="bt0" onclick="document.getElementById('ans').innerHTML += document.getElementById('bt0').value" value="0">0</button> -->
+        <div style="display: flex;">
+            <div class="check" >Check</div>
+            <div class="check" >Correct</div>
+            <div class="redi"></div>
+            
+        </div>
+        <table>
+            
+            <tr>
+                <td> <button id="bt7" onclick="document.getElementById('ans').value += document.getElementById('bt7').value" value="7">7</button>
+                </td>
+                <td><button id="bt8" onclick="document.getElementById('ans').value += document.getElementById('bt8').value" value="8">8</button>
+                </td>
+                <td><button id="bt9" onclick="document.getElementById('ans').value += document.getElementById('bt9').value" value="9">9</button>
+                </td>
+                <td> <button id="btmode" onclick="document.getElementById('ans').value += document.getElementById('btmode').value" value="%">%</button>
+                </td>
+                <td> <button style="font-size: 20px;" id="btclose" onclick="document.getElementById('ans').value = document.getElementById('btclose').value" value="">Close</button>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><button id="bt4" onclick="document.getElementById('ans').value += document.getElementById('bt4').value" value="4">4</button>
+                </td>
+                <td><button id="bt5" onclick="document.getElementById('ans').value += document.getElementById('bt5').value" value="5">5</button>
+                </td>
+                <td> <button id="bt6" onclick="document.getElementById('ans').value += document.getElementById('bt6').value" value="6">6</button>
+                </td>
+                <td> <button id="btmulti" onclick="document.getElementById('ans').value += document.getElementById('btmulti').value" value="*">*</button>
+                </td>
+                <td> <button id="btminus" onclick="document.getElementById('ans').value += document.getElementById('btminus').value" value="-">-</button>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><button id="bt1" onclick="document.getElementById('ans').value += document.getElementById('bt1').value" value="1">1</button></td>
+                <td><button id="bt2" onclick="document.getElementById('ans').value += document.getElementById('bt2').value" value="2">2</button></td>
+                <td><button id="bt3" onclick="document.getElementById('ans').value += document.getElementById('bt3').value" value="3">3</button></td>
+                <td class="btplus"> <button id="btplus" onclick="document.getElementById('ans').value += document.getElementById('btplus').value" value="+">+</button>
+                </td>
+                <td><button id="btdive" onclick="document.getElementById('ans').value += document.getElementById('btdive').value" value="/">/</button>
+                </td>
+                
+            </tr>
+            <tr>
+                <td><button id="bt0" onclick="document.getElementById('ans').value += document.getElementById('bt0').value" value="0">0</button> 
+                </td>
+                <td><button id="bt00" onclick="document.getElementById('ans').value += document.getElementById('bt00').value" value="00">00</button> 
+                </td>
+                <td><button id="bt." onclick="document.getElementById('ans').value += document.getElementById('bt.').value" value=".">.</button> 
+                </td>
+                <td><button onclick="document.getElementById('ans').value=eval(document.getElementById('ans').value)">=</button> 
+                </td>
+                <td><button onclick="mydel()">X</button> 
+                </td>
+            </tr>
+            
+           
+        </table>
+    </div>
+
+<script>
+    function mydel(){
+        let mystr = document.getElementById('ans').value;
+        let ans2= mystr.slice(0,mystr.length-1);
+        document.getElementById('ans').value=ans2;
+        
+    }
+</script>
+</body>
+</html>
